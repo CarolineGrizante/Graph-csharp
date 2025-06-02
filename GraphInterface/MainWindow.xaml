@@ -1,0 +1,86 @@
+﻿<Window x:Class="GraphInterface.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:GraphInterface" 
+        mc:Ignorable="d" 
+        Title="Grafo" Height="600" Width="900"
+        Icon="Assets/Grafo.ico">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Coluna Esquerda: Controles -->
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,0,10,0">
+                <GroupBox Header="Vértices">
+                    <StackPanel>
+                        <Label Content="Nome do Vértice:"/>
+                        <TextBox x:Name="txtNovoVertice" Margin="0,0,0,5"/>
+                        <Button x:Name="btnAddVertice" Content="Adicionar Vértice" Click="BtnAddVertice_Click" Margin="0,0,0,10"/>
+
+                        <Label Content="Remover Vértice:"/>
+                        <ComboBox x:Name="cmbRemoverVertice" Margin="0,0,0,5"/>
+                        <Button x:Name="btnRemoverVertice" Content="Remover Vértice" Click="BtnRemoverVertice_Click" Margin="0,0,0,10"/>
+
+                        <Label Content="Vértices Existentes:"/>
+                        <ListBox x:Name="lstVertices" Height="100" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Arestas">
+                    <StackPanel>
+                        <Label Content="Origem:"/>
+                        <ComboBox x:Name="cmbArestaOrigem" Margin="0,0,0,5"/>
+                        <Label Content="Destino:"/>
+                        <ComboBox x:Name="cmbArestaDestino" Margin="0,0,0,5"/>
+                        <Label Content="Peso:"/>
+                        <TextBox x:Name="txtArestaPeso" Margin="0,0,0,5"/>
+                        <Button x:Name="btnAddAresta" Content="Adicionar Aresta" Click="BtnAddAresta_Click" Margin="0,0,0,10"/>
+
+                        <!-- Opcional: Remover Aresta -->
+                        <!-- <Label Content="Remover Aresta (Origem):"/> -->
+                        <!-- <ComboBox x:Name="cmbRemoverArestaOrigem" Margin="0,0,0,5"/> -->
+                        <!-- <Label Content="Remover Aresta (Destino):"/> -->
+                        <!-- <ComboBox x:Name="cmbRemoverArestaDestino" Margin="0,0,0,5"/> -->
+                        <!-- <Button x:Name="btnRemoverAresta" Content="Remover Aresta" Click="BtnRemoverAresta_Click" Margin="0,0,0,10"/> -->
+
+                        <Label Content="Arestas Existentes:"/>
+                        <ListBox x:Name="lstArestas" Height="100" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Algoritmo de Dijkstra">
+                    <StackPanel>
+                        <Label Content="Origem:"/>
+                        <ComboBox x:Name="cmbDijkstraOrigem" Margin="0,0,0,5"/>
+                        <Label Content="Destino:"/>
+                        <ComboBox x:Name="cmbDijkstraDestino" Margin="0,0,0,5"/>
+                        <Button x:Name="btnExecutarDijkstra" Content="Executar Dijkstra" Click="BtnExecutarDijkstra_Click" Margin="0,0,0,10"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Arquivo">
+                    <StackPanel>
+                        <Button x:Name="btnCarregarGrafo" Content="Carregar Grafo (grafo.txt)" Click="BtnCarregarGrafo_Click"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Coluna Central: Visualização do Grafo -->
+        <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="10,0">
+            <Canvas x:Name="graphCanvas" Background="WhiteSmoke"/>
+        </Border>
+
+        <!-- Coluna Direita: Resultados/Logs -->
+        <GroupBox Grid.Column="2" Header="Resultados">
+            <TextBox x:Name="txtLogs" Margin="5" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        </GroupBox>
+
+    </Grid>
+</Window>
