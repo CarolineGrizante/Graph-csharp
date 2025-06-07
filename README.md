@@ -31,16 +31,22 @@ A seguir, prints do sistema funcionando:
 <p align="center">
   <img src="Images/Grafo-1.png" width="800" alt="Grafo - imagem 1"/>
   <br/>
+  
   <img src="Images/Grafo-2.png" width="800" alt="Grafo - imagem 2"/>
   <br/>
+  
   <img src="Images/Grafo-3.png" width="800" alt="Grafo - imagem 3"/>
   <br/>
+  
   <img src="Images/Grafo-4.png" width="800" alt="Grafo - imagem 4"/>
   <br/>
+  
   <img src="Images/Grafo-5.png" width="800" alt="Grafo - imagem 5"/>
   <br/>
+  
   <img src="Images/Grafo-6.png" width="800" alt="Grafo - imagem 6"/>
   <br/>
+  
   <img src="Images/Grafo-7.png" width="800" alt="Grafo - imagem 7"/>
 </p>
 
