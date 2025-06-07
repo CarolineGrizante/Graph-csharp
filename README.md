@@ -51,4 +51,4 @@ A seguir, prints do sistema funcionando:
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/CarolineGrizante/Graph-csharp.git
